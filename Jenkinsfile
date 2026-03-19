@@ -94,6 +94,14 @@ pipeline {
                 
             }
         }
+        stage('Dynamic') {
+            when {
+                branch 'feature/test*'
+            }
+            steps {
+                echo(message: "Dynamic...")
+            }
+        }
         stage('Publish') {
             steps {
                 echo(message: "Publish...")
