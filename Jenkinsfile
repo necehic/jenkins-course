@@ -37,7 +37,7 @@ pipeline {
                     }
                 dir ('pipeline') {
                     git (
-                    branch: "${GIT_BRANCH}",
+                    branch: "${params.GIT_BRANCH}",
                     url: 'https://github.com/KLevon/jenkins-course')
                 }
                 rtDownload(
